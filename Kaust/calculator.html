@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="et">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kalorikalkulaator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="calc-page">
+    <div class="calculator">
+      <h2>Kalorikalkulaator</h2>
+
+      <div class="row">
+        <label for="gender">Sugu</label>
+        <select id="gender">
+          <option value="male">Mees</option>
+          <option value="female">Naine</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="weight">Kehakaal (kg)</label>
+        <input type="number" id="weight" placeholder="Näide: 80" />
+      </div>
+
+      <div class="row">
+        <label for="height">Pikkus (cm)</label>
+        <input type="number" id="height" placeholder="Näide: 180" />
+      </div>
+
+      <div class="row">
+        <label for="age">Vanus</label>
+        <input type="number" id="age" placeholder="Näide: 30" />
+      </div>
+
+      <div class="row">
+        <label for="activity">Päevane aktiivsus</label>
+        <select id="activity">
+          <option value="1.2">Väga madal (istuv)</option>
+          <option value="1.375">Madal</option>
+          <option value="1.55" selected>Keskmine (kerge tegevus)</option>
+          <option value="1.725">Kõrge</option>
+          <option value="1.9">Väga kõrge (väga aktiivne)</option>
+        </select>
+      </div>
+
+      <div class="row">
+        <label for="goal">Eesmärk (kalorite lisandus / vähendus päevas)</label>
+        <select id="goal">
+          <option value="maintain">Säilitamine</option>
+
+          <option value="lose05">-0.5 kg nädalas</option>
+          <option value="lose1">-1 kg nädalas</option>
+
+          <option value="gain05">+0.5 kg nädalas</option>
+          <option value="gain1">+1 kg nädalas</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button onclick="calculate()">Arvuta</button>
+        <button id="resetBtn" class="secondary">Tühista</button>
+      </div>
+
+      <div id="result" class="result"></div>
+
+      <p class="note">
+        Kasutus: Sisesta oma andmed ja vali aktiivsus ning eesmärk. Kalkulaator
+        kasutab Mifflin-St Jeor valemit.
+      </p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
