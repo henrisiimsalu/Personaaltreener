@@ -1,5 +1,5 @@
 /* =========================
-   BLUE & WHITE THEME – FIXED
+   BLUE & WHITE THEME – EXTENDED
    ========================= */
 
 * {
@@ -41,10 +41,11 @@ body {
   text-decoration: none;
   border-radius: 999px;
   font-weight: 600;
+  z-index: 1000;
 }
 
 /* =========================
-   HERO (index.html)
+   HERO
    ========================= */
 
 .hero {
@@ -75,6 +76,12 @@ body {
   text-decoration: none;
   display: inline-block;
   font-weight: 600;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(30,102,255,0.3);
 }
 
 /* =========================
@@ -102,6 +109,58 @@ body {
 }
 
 /* =========================
+   PROFILE SECTION
+   ========================= */
+
+.profile-wrapper {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 40px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.profile-image img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.profile-info {
+  text-align: left;
+  flex: 1;
+}
+
+.quick-points {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.quick-points li {
+  margin-bottom: 8px;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* =========================
+   LIST STYLING
+   ========================= */
+
+.list {
+  max-width: 700px;
+  margin: 30px auto 0;
+  text-align: left;
+}
+
+.list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #dce7ff;
+}
+
+/* =========================
    SERVICES
    ========================= */
 
@@ -119,6 +178,11 @@ body {
   width: 260px;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h3 {
@@ -128,6 +192,51 @@ body {
 
 .card p {
   color: var(--text-light);
+}
+
+/* =========================
+   TIMELINE
+   ========================= */
+
+.timeline {
+  max-width: 700px;
+  margin: 0 auto;
+  list-style: none;
+  text-align: left;
+}
+
+.timeline li {
+  padding: 15px 0;
+  border-left: 3px solid var(--blue);
+  padding-left: 15px;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 8px;
+}
+
+/* =========================
+   ACHIEVEMENTS
+   ========================= */
+
+.achievements {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.achievement {
+  background: white;
+  padding: 25px;
+  min-width: 200px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.achievement h3 {
+  font-size: 32px;
+  color: var(--blue);
 }
 
 /* =========================
@@ -142,7 +251,7 @@ footer {
 }
 
 /* =========================
-   CALCULATOR PAGE
+   CALCULATOR PAGE (UNCHANGED)
    ========================= */
 
 .calc-page {
@@ -238,16 +347,136 @@ button.secondary {
     padding: 50px 20px;
   }
 
-  .services {
+  .services,
+  .achievements {
     flex-direction: column;
     align-items: center;
   }
 
-  .card {
+  .card,
+  .achievement {
     width: 90%;
+  }
+
+  .profile-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-info {
+    text-align: center;
   }
 
   .actions {
     flex-direction: column;
+  }
+}
+.contact-form {
+  max-width: 500px;
+  margin: 30px auto 0;
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+#form-status {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+.socials a {
+  font-size: 26px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+}
+footer {
+  background: var(--blue);
+  color: white;
+  padding: 40px 20px 20px;
+}
+
+.footer-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.footer-info h3 {
+  margin-bottom: 10px;
+}
+
+.footer-info p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+.footer-info i {
+  margin-right: 8px;
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.socials a {
+  width: 45px;
+  height: 45px;
+  background: white;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  transform: translateY(-4px);
+  background: #dbe7ff;
+}
+
+copyright {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+@media (max-width: 700px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 }

@@ -81,3 +81,32 @@ function resetForm(){
   document.getElementById("age").value = "";
   document.getElementById("result").innerHTML = "";
 }
+
+
+(function () {
+  emailjs.init("r5OGPyocKkCqhSUnv"); // Public key
+})();
+
+const form = document.getElementById("contact-form");
+const status = document.getElementById("form-status");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  status.innerHTML = "Saatmine...";
+
+  emailjs.send("service_yg4etbl", "template_a0x80lb", params)
+    .then(function (response) {
+      status.innerHTML = "✅ Sõnum saadetud!";
+      form.reset();
+    }, function (error) {
+      status.innerHTML = "❌ Midagi läks valesti...";
+      console.log("ERROR:", error);
+    });
+});
