@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Henri Siimsalu – Personaaltreener</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1 class="title">Henri Siimsalu</h1>
+      <p class="subtitle">Personaaltreener · Tulemused, mida tunned</p>
+      <a href="#contact" class="btn-main">Võta Ühendust</a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <h2>Kes on Henri Siimsalu?</h2>
+    <p class="text">
+      Olen pühendunud personaaltreener, kelle eesmärk on aidata Sul saavutada parim vorm – olgu selleks 
+      lihasmassi kasvatamine, kaalulangus, parem liikuvus või kindel treeningrutiin. Töötan iga kliendiga individuaalselt, 
+      et pakkuda just Sinu eesmärkide ja võimalustega sobivat treeningprogramme.
+    </p>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section dark" id="services">
+    <h2>Mida Pakun?</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Personaaltreeningud</h3>
+        <p>Individuaalne treeningprogramm, mis on loodud täpselt Sinu eesmärkide järgi.</p>
+      </div>
+      <div class="card">
+        <h3>Toitumisnõustamine</h3>
+        <p>Selged ja lihtsad toitumisjuhised paremate tulemuste saavutamiseks.</p>
+      </div>
+      <div class="card">
+        <h3>Tervisekontroll & Analüüs</h3>
+        <p>Kehaanalüüs, kehakoostise mõõtmine ning personaalse arengu jälgimine.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section" id="location">
+    <h2>Treeningute Asukoht</h2>
+    <p class="text">Kogre tee 1, Englase Spordiklubi</p>
+    <iframe 
+      class="map"
+      src="https://maps.google.com/maps?q=Kogre%20tee%201&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      loading="lazy">
+    </iframe>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section dark" id="contact">
+    <h2>Võta Ühendust</h2>
+
+    <div class="contact-info">
+      <p><strong>Email:</strong> henrisiim11@gmail.com</p>
+      <p><strong>Telefon:</strong> 5306 5321</p>
+    </div>
+
+    <form id="contactForm" class="contact-form">
+      <input type="text" name="name" placeholder="Sinu nimi" required>
+      <input type="email" name="email" placeholder="Sinu e-post" required>
+      <textarea name="message" placeholder="Sinu sõnum" required></textarea>
+      <button type="submit" class="btn-main">Saada</button>
+      <p id="status"></p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    © <span id="year"></span> Henri Siimsalu
+  </footer>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
